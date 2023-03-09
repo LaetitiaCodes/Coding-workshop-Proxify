@@ -5,11 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coding Workshop</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="container">
       <header>
-        <h1>👩‍💻 Let's Code!</h1>
+        <h1>👨‍🏫 Let's Code! 👩‍💻</h1>
         <h2 id="coursePurpose">
           Learn something new and become even better at your job
         </h2>
@@ -25,15 +31,32 @@
             This is a hands-on workshop, curated for the lovely DACH Team!</span
           >
         </p>
+
         <img src="coding_class.jpeg" alt="codingWorkshop" width="400px" />
         <div class="button-container">
           <button>Register now</button>
         </div>
       </section>
-
       <footer>
-        This site was made by Laetitia, with HTML, CSS and hosted on Netlify
+        <a href="https://github.com/LaetitiaCodes/Coding-Workshop-Proxify/"
+          >Open sourced code</a
+        >
+        by Laetitia Ganglmair
       </footer>
     </div>
+    <script>
+      function registerNow() {
+        let registrationButton = prompt("Do you work at Proxify?");
+        if (registrationButton === "yes") {
+          alert("Great, you can register to this Coding Workshop!");
+        } else
+          alert(
+            "Sorry, you don't work at Proxify, you cannot register to this Coding Workshop"
+          );
+      }
+
+      let signUpButton = document.querySelector(".button-container");
+      signUpButton.addEventListener("click", registerNow);
+    </script>
   </body>
 </html>
